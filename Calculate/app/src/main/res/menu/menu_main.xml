@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.zhm.calculate.Calculate">
+    <item
+        android:id="@+id/calculate"
+        android:orderInCategory="100"
+        android:title="@string/calculate"
+        />
+    <item
+        android:id="@+id/transfrom_unit"
+        android:orderInCategory="100"
+        android:title="@string/transfrom_unit"
+        />
+    <item
+        android:id="@+id/transfrom_system"
+        android:orderInCategory="100"
+        android:title="@string/transfrom_system"
+        />
+    <item
+        android:id="@+id/exit"
+        android:orderInCategory="100"
+        android:title="退出" />
+
+</menu>
