@@ -15,7 +15,7 @@ import android.os.Bundle;
 
 
 public class Calculate extends AppCompatActivity {
-    public double pi=4*Math.atan(1);//定义π的数值大小以便计算sin cos
+    public double pi = 4 * Math.atan(1);//定义π的数值大小以便计算sin cos
     TextView textView;//显示窗口
     Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button0;//数字键
     Button add, cut, rid, divide;//四则运算符号
@@ -215,6 +215,7 @@ public class Calculate extends AppCompatActivity {
             }
         }
     };
+
     //以下是右上角的菜单功能
     //可以切换计算器的功能
     @Override
@@ -240,10 +241,10 @@ public class Calculate extends AppCompatActivity {
             case R.id.exit:
                 System.exit(0);
         }
-
-
         return super.onOptionsItemSelected(item);
     }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
