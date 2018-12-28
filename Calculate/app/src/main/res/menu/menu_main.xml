@@ -1,21 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.zhm.calculate.Calculate">
+    tools:context="com.example.calculator.MainActivity">
     <item
-        android:id="@+id/calculate"
+        android:id="@+id/calculator"
         android:orderInCategory="100"
-        android:title="@string/calculate"
+        android:title="@string/calculator"
         />
     <item
-        android:id="@+id/transfrom_unit"
+        android:id="@+id/transform"
         android:orderInCategory="100"
-        android:title="@string/transfrom_unit"
+        android:title="@string/transform1"
         />
     <item
-        android:id="@+id/transfrom_system"
+        android:id="@+id/transform2"
         android:orderInCategory="100"
-        android:title="@string/transfrom_system"
+        android:title="@string/transform2"
         />
     <item
         android:id="@+id/exit"

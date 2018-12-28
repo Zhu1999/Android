@@ -11,11 +11,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.Bundle;
 
-
-public class Calculate extends AppCompatActivity {
-    public double pi = 4 * Math.atan(1);//定义π的数值大小以便计算sin cos
+public class MainActivity extends AppCompatActivity {
+    public double pi = 4*Math.atan(1);//定义π的数值大小以便计算sin cos
     TextView textView;//显示窗口
     Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button0;//数字键
     Button add, cut, rid, divide;//四则运算符号
@@ -72,7 +70,7 @@ public class Calculate extends AppCompatActivity {
                         break;
                     case R.id. sqrt:
                         if (b < 0) {
-                            Toast.makeText(Calculate.this, "请输入大于等于0的数", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "请输入大于等于0的数", Toast.LENGTH_LONG).show();
                             text.setText("");
                             break;
                         }
@@ -102,7 +100,7 @@ public class Calculate extends AppCompatActivity {
                             break;
                         case 4:
                             if (b == 0) {
-                                Toast.makeText(Calculate.this, "0不能为除数", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "0不能为除数", Toast.LENGTH_LONG).show();
                                 text.setText("");
                                 break;
                             }
@@ -175,7 +173,7 @@ public class Calculate extends AppCompatActivity {
                             break;
                         case 4:
                             if (b == 0) {
-                                Toast.makeText(Calculate.this, "0不能当除数", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "0不能当除数", Toast.LENGTH_LONG).show();
                                 text.setText("");
                                 flag = false;
                                 break;
@@ -215,7 +213,6 @@ public class Calculate extends AppCompatActivity {
             }
         }
     };
-
     //以下是右上角的菜单功能
     //可以切换计算器的功能
     @Override
@@ -231,20 +228,20 @@ public class Calculate extends AppCompatActivity {
                 Toast.makeText(this, "已经在计算器！", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.transform:
-                Intent intent=new Intent(Calculate.this,Transfrom.class);
+                Intent intent=new Intent(MainActivity.this,Transform1.class);
                 startActivity(intent);
                 break;
             case R.id.transform2:
-                Intent intent2=new Intent(Calculate.this,Tranfrom_system.class);
+                Intent intent2=new Intent(MainActivity.this,Transform2.class);
                 startActivity(intent2);
                 break;
             case R.id.exit:
                 System.exit(0);
         }
+
+
         return super.onOptionsItemSelected(item);
     }
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -301,7 +298,7 @@ public class Calculate extends AppCompatActivity {
         }
         else if(this.getResources().getConfiguration().orientation==Configuration.ORIENTATION_LANDSCAPE)
         {
-            Intent intent=new Intent(Calculate.this,Land_Calculate.class);
+            Intent intent=new Intent(MainActivity.this,Land_MainActivity.class);
             startActivity(intent);
 
         }

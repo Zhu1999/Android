@@ -13,14 +13,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Transfrom extends AppCompatActivity{
 
+//s实现单位转换功能的代码
+public class Transform1 extends AppCompatActivity {
     EditText e_li, e_m, e_chi, e_zhang, e_cun, e_fen, e_mile, e_foot, e_inch;
     String s_li, s_m, s_chi, s_zhang, s_cun, s_fen, s_mile, s_foot, s_inch;
     Button b_li, b_m, b_chi, b_zhang, b_cun, b_fen, b_mile, b_foot, b_inch,  clear2;
     double d_li, d_m, d_chi, d_zhang, d_cun, d_fen, d_mile, d_foot, d_inch;
     private Dialog mDialog;
-    //判断是否为空
+//判断是否为空
     public static boolean isEmpty(CharSequence str) {
         if (str == null || str.length() == 0)
             return true;
@@ -41,7 +42,7 @@ public class Transfrom extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transfrom);
+        setContentView(R.layout.activity_transform);
         //获取
         b_li = (Button) findViewById(R.id.btn_li);
         b_m = (Button) findViewById(R.id.btn_m);
@@ -108,10 +109,10 @@ public class Transfrom extends AppCompatActivity{
                     e_inch.setText(String.format("%.5f", d_inch));
                 }
                 else{
-                    mDialog = new Dialog(Transfrom.this);
+                    mDialog = new Dialog(Transform1.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -143,10 +144,10 @@ public class Transfrom extends AppCompatActivity{
                     e_foot.setText(String.format("%.5f", d_foot));
                     e_inch.setText(String.format("%.5f", d_inch));
                 }else {
-                    mDialog = new Dialog(Transfrom.this);
+                    mDialog = new Dialog(Transform1.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -178,10 +179,10 @@ public class Transfrom extends AppCompatActivity{
                     e_foot.setText(String.format("%.2f", d_foot));
                     e_inch.setText(String.format("%.2f", d_inch));
                 }else{
-                    mDialog = new Dialog(Transfrom.this);
+                    mDialog = new Dialog(Transform1.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -213,10 +214,10 @@ public class Transfrom extends AppCompatActivity{
                     e_foot.setText(String.format("%.2f", d_foot));
                     e_inch.setText(String.format("%.2f", d_inch));
                 }else{
-                    mDialog = new Dialog(Transfrom.this);
+                    mDialog = new Dialog(Transform1.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -248,15 +249,15 @@ public class Transfrom extends AppCompatActivity{
                     e_foot.setText(String.format("%.2f", d_foot));
                     e_inch.setText(String.format("%.2f", d_inch));
                 }else{
-                    mDialog = new Dialog(Transfrom.this);
+                    mDialog = new Dialog(Transform1.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
                 }
-            }
+             }
         });
         b_fen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -283,10 +284,10 @@ public class Transfrom extends AppCompatActivity{
                     e_foot.setText(String.format("%.2f", d_foot));
                     e_inch.setText(String.format("%.2f", d_inch));
                 }else {
-                    mDialog = new Dialog(Transfrom.this);
+                    mDialog = new Dialog(Transform1.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -318,10 +319,10 @@ public class Transfrom extends AppCompatActivity{
                     e_foot.setText(String.format("%.2f", d_foot));
                     e_inch.setText(String.format("%.2f", d_inch));
                 }else{
-                    mDialog = new Dialog(Transfrom.this);
+                    mDialog = new Dialog(Transform1.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -333,30 +334,30 @@ public class Transfrom extends AppCompatActivity{
                 s_foot = e_foot.getText().toString();
                 boolean s=isNumeric(s_foot);
                 if(s==true&&isEmpty(s_foot)==false){
-                    d_foot = Double.parseDouble(s_foot);
+                d_foot = Double.parseDouble(s_foot);
 
-                    d_m = d_foot * 0.3048;
-                    d_li = d_foot * 0.0006096;
-                    d_zhang = d_foot * 0.09144;
-                    d_chi = d_foot * 0.9144;
-                    d_cun = d_foot * 9.144;
-                    d_fen = d_foot * 91.44;
-                    d_mile = d_foot * 0.33333333;
-                    d_inch = d_foot * 12;
+                d_m = d_foot * 0.3048;
+                d_li = d_foot * 0.0006096;
+                d_zhang = d_foot * 0.09144;
+                d_chi = d_foot * 0.9144;
+                d_cun = d_foot * 9.144;
+                d_fen = d_foot * 91.44;
+                d_mile = d_foot * 0.33333333;
+                d_inch = d_foot * 12;
 
-                    e_m.setText(String.format("%.5f", d_m));
-                    e_cun.setText(String.format("%.8f", d_cun));
-                    e_li.setText(String.format("%.5f", d_li));
-                    e_zhang.setText(String.format("%.5f", d_zhang));
-                    e_chi.setText(String.format("%.5f", d_chi));
-                    e_fen.setText(String.format("%.5f", d_fen));
-                    e_mile.setText(String.format("%.5f", d_mile));
-                    e_inch.setText(String.format("%.4f", d_inch));
+                e_m.setText(String.format("%.5f", d_m));
+                e_cun.setText(String.format("%.8f", d_cun));
+                e_li.setText(String.format("%.5f", d_li));
+                e_zhang.setText(String.format("%.5f", d_zhang));
+                e_chi.setText(String.format("%.5f", d_chi));
+                e_fen.setText(String.format("%.5f", d_fen));
+                e_mile.setText(String.format("%.5f", d_mile));
+                e_inch.setText(String.format("%.4f", d_inch));
                 }else {
-                    mDialog = new Dialog(Transfrom.this);
+                    mDialog = new Dialog(Transform1.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -388,10 +389,10 @@ public class Transfrom extends AppCompatActivity{
                     e_mile.setText(String.format("%.5f", d_mile));
                     e_foot.setText(String.format("%.4f", d_foot));
                 }else{
-                    mDialog = new Dialog(Transfrom.this);
+                    mDialog = new Dialog(Transform1.this);
                     mDialog.setTitle("警告！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -408,14 +409,14 @@ public class Transfrom extends AppCompatActivity{
 
         switch (id) {
             case R.id.calculator:
-                Intent intent=new Intent(Transfrom.this,Calculate.class);
+                Intent intent=new Intent(Transform1.this,MainActivity.class);
                 startActivity(intent);
                 break;
             case R.id.transform:
                 Toast.makeText(this, "您已经在单位转换器！", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.transform2:
-                Intent intent2=new Intent(Transfrom.this,Tranfrom_system.class);
+                Intent intent2=new Intent(Transform1.this,Transform2.class);
                 startActivity(intent2);
                 break;
             case R.id.exit:
@@ -426,3 +427,4 @@ public class Transfrom extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
     }
 }
+

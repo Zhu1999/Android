@@ -14,8 +14,7 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
 //实现进制转换功能的代码
-public class Tranfrom_system extends AppCompatActivity{
-
+public class Transform2 extends AppCompatActivity {
     EditText e2,e10,e16;
     String s2,s10,s16;
     Button b2,b10,b16,clear22;//定义按钮
@@ -40,18 +39,17 @@ public class Tranfrom_system extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transfrom_system);
+        setContentView(R.layout.activity_transform2);
         b2 = (Button) findViewById(R.id.btwo);
         b10 = (Button) findViewById(R.id.bten);
         b16 = (Button) findViewById(R.id.bsixt);
         clear22 = (Button) findViewById(R.id.clear22);
-        e2 = (EditText) findViewById(R.id.twos);
+        e2 = (EditText) findViewById(R.id.two);
         e10 = (EditText) findViewById(R.id.ten);
         e16 = (EditText) findViewById(R.id.sixt);
 
         clear22.setOnClickListener((new View.OnClickListener() {
-            public void onClick(View v) {
-                //重置按钮触发器
+            public void onClick(View v) {        //重置按钮触发器
                 e2.setText("");
                 e10.setText("");
                 e16.setText("");
@@ -74,10 +72,10 @@ public class Tranfrom_system extends AppCompatActivity{
                     e10.setText(s10);
                     e16.setText(s16);
                 }else{
-                    mDialog = new Dialog(Tranfrom_system.this);
+                    mDialog = new Dialog(Transform2.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -89,19 +87,19 @@ public class Tranfrom_system extends AppCompatActivity{
                 s10 = e10.getText().toString();
                 boolean s=isNumeric(s10);
                 if(s==true&&isEmpty(s10)==false){
-                    i10 = Integer.parseInt(s10);
+                i10 = Integer.parseInt(s10);
 
-                    s2 = Integer.toBinaryString(i10);
-                    ;
-                    s16 = Integer.toHexString(i10);
+                s2 = Integer.toBinaryString(i10);
+                ;
+                s16 = Integer.toHexString(i10);
 
-                    e2.setText(s2);
-                    e16.setText(s16);
+                e2.setText(s2);
+                e16.setText(s16);
                 }else{
-                    mDialog = new Dialog(Tranfrom_system.this);
+                    mDialog = new Dialog(Transform2.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -119,10 +117,10 @@ public class Tranfrom_system extends AppCompatActivity{
                     e2.setText(s2);
                     e10.setText(s10);
                 }else{
-                    mDialog = new Dialog(Tranfrom_system.this);
+                    mDialog = new Dialog(Transform2.this);
                     mDialog.setTitle("警告！！！");
                     mDialog.setCancelable(false);
-                    mDialog.setContentView(R.layout.acticity_error);
+                    mDialog.setContentView(R.layout.error);
                     Button wButton = (Button) mDialog.findViewById(R.id.button);
                     wButton.setOnClickListener(wButtonOnClick);
                     mDialog.show();
@@ -139,11 +137,11 @@ public class Tranfrom_system extends AppCompatActivity{
 
         switch (id) {
             case R.id.calculator:
-                Intent intent=new Intent(Tranfrom_system.this,Calculate.class);
+                Intent intent=new Intent(Transform2.this,MainActivity.class);
                 startActivity(intent);
                 break;
             case R.id.transform:
-                Intent intent2=new Intent(Tranfrom_system.this,Transfrom.class);
+                Intent intent2=new Intent(Transform2.this,Transform1.class);
                 startActivity(intent2);
                 break;
             case R.id.transform2:

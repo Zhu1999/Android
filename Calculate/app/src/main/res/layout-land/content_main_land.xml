@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.zhm.calculate.Land_Calculate">
+    android:background="@mipmap/login4"
+    tools:context="com.example.zhm.calculate.Land_MainActivity">
 
     <EditText
         android:id="@+id/input"
@@ -15,6 +16,7 @@
         android:layout_height="wrap_content"
         android:gravity="right"
         android:cursorVisible="false"
+        android:textSize="23dp"
         android:text="0"
         />
     <!-- 默认显示字符串0 -->
@@ -27,7 +29,7 @@
         />
 
     <TableLayout
-        android:layout_marginLeft="-10dp"
+        android:layout_marginLeft="-20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/T"
